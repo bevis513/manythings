@@ -1,0 +1,17 @@
+{
+  "name": "manythings",
+  "dependencies": {
+    "bootstrap": "3.*",
+    "jquery": "2.*",
+    "jquery-ui": "~1.11.4",
+    "q": "1.*",
+    "react": ">0.10.0",
+    "react-bootstrap": ">=0.22.4",
+    "react-router": ">=0.13.1",
+    "react-router-bootstrap": "0.18.1",
+    "requirejs": "2.1.*",
+    "requirejs-domReady": "2.*",
+    "requirejs-react-jsx": "0.14.2",
+    "requirejs-text": "2.*"
+  }
+}
