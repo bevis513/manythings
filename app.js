@@ -3,6 +3,7 @@ require.config({
     paths: {
         'app': '../app',
         
+        'q': 'q/q',
         'jquery': 'jquery/dist/jquery',
         'jqueryui': 'jquery-ui/jquery-ui',
         'bootstrap': 'bootstrap/dist/js/bootstrap',
@@ -15,6 +16,7 @@ require.config({
         'react-router': 'react-router/build/umd/ReactRouter',
         'react-bootstrap': 'react-bootstrap/react-bootstrap',
         'react-router-bootstrap': 'react-router-bootstrap/lib/ReactRouterBootstrap',
+        'primitives': '../lib/primitives.latest'
     },
     shim: {
         /* "react": {
@@ -22,14 +24,21 @@ require.config({
         },
         "JSXTransformer": "JSXTransformer", */
         'jquery': {
-            "exports": "$",
+            "exports": "jQuery",
             "init": function() {
-                return $.noConflict();
+                return jQuery.noConflict();
             }
         },
         'jqueryui': {
-            'exports': '$',
+            'exports': 'jQuery',
             'deps': ['jquery']
+        },
+        'primitives': {
+            'deps': ['jquery', 'jqueryui'],
+            'exports': 'primitives'
+        },
+        'q': {
+            'exports': 'Q'
         }
     },
     
